@@ -1,9 +1,6 @@
 import { UserRejectedRequestError } from "@web3-react/injected-connector";
 import { UserRejectedRequestError as walletConnectUserRejectedRequestError } from "@web3-react/walletconnect-connector";
 
-import Web3 from "web3";
-new Web3(Web3.givenProvider || "http://localhost:3000");
-
 export const getErrorMessage = (errorObj: any) => {
   let errorMessage;
   switch (true) {
@@ -23,12 +20,6 @@ export const getErrorMessage = (errorObj: any) => {
       break;
   }
   return errorMessage;
-};
-
-export const filterList = (arr: any[], criteria: any) => {
-  if (criteria)  {
-    return arr.filter((d) => d.name === criteria);
-  }
 };
 
 export const formatAccount = (acc: any) => {
