@@ -14,9 +14,7 @@ export default function App() {
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
 
-  
-
-  //  Wallet conncection handlers
+  //  Wallet conncection Handlers
   const handleMetamaskConnect = async () => {
     try {
       await context.activate(injected, undefined, true);
@@ -188,4 +186,3 @@ export default function App() {
     </div>
   );
 }
-
