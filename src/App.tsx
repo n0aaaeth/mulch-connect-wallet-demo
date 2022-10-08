@@ -31,6 +31,8 @@ export default function App() {
   const handleWalletConnect = useCallback(async () => {
     try {
       await context.activate(walletconnect, undefined, true);
+       //@ts-ignore
+      localStorage.setItem("isWalletConnected", true);
       setConnectedAccounts((prev) => new Set<string>(...prev).add("WalletConnect"));
     } catch (error: any) {
       setWalletError(getErrorMessage(error.message));
@@ -42,6 +44,8 @@ export default function App() {
   const handleCoinBaseWallet = async () => {
     try {
       await context.activate(walletlink, undefined, true);
+       //@ts-ignore
+      localStorage.setItem("isWalletConnected", true);
       setConnectedAccounts((prev) => new Set(...prev).add("Coinbase"));
     } catch (error) {
       setWalletError(getErrorMessage(error));
