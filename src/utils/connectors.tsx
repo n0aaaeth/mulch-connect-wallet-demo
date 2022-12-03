@@ -2,7 +2,7 @@ import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { WalletLinkConnector } from "@web3-react/walletlink-connector";
 
-const infuraId = "2925db8b5b8741319f71e895227602bd";
+const infuraId = "";
 
 const RPC_URLS = {
   1: `https://mainnet.infura.io/v3/${infuraId}`,
